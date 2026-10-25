@@ -1,15 +1,233 @@
-body {
-    font-family: sans-serif;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.8;
-    background-color: #f7f7f7;
-    color: #333;
+/* ページ全体 */
+* {
+    box-sizing: border-box;
 }
 
-h1{
-    color: #3b3692;
-    border-bottom: 2px double #3b3692;
-    padding-bottom: 8px;
+body {
+    margin: 0;
+    background-color: #f8f5ed;
+    color: #283747;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN",
+                 "Noto Serif JP", serif;
+    line-height: 1.9;
+}
+
+.container {
+    width: min(900px, 90%);
+    margin: 0 auto;
+}
+
+/* ヘッダー */
+.site-header {
+    background-color: #1d3045;
+    color: #fffaf0;
+    border-bottom: 4px solid #b99a5b;
+}
+
+.header-inner {
+    padding: 24px 0 20px;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    letter-spacing: 0.08em;
+}
+
+.subtitle {
+    margin: 4px 0 0;
+    color: #e2c98f;
+    font-size: 0.95rem;
+}
+
+/* 自己紹介 */
+.intro {
+    padding: 48px 0 32px;
+    border-bottom: 1px solid #d8c9a8;
+}
+
+.eyebrow {
+    margin: 0;
+    color: #9b793d;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+}
+
+.intro h2 {
+    margin: 6px 0 16px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.5;
+}
+
+.intro > p:last-child {
+    max-width: 720px;
+    margin-bottom: 0;
+}
+
+/* 各セクション */
+.content-section {
+    padding: 28px 0;
+    border-bottom: 1px solid #e1d7c2;
+}
+
+.content-section h2,
+.message h2 {
+    margin: 0 0 18px;
+    padding-left: 14px;
+    border-left: 5px solid #b99a5b;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* プロフィール */
+.profile-list {
+    margin: 0;
+}
+
+.profile-list div {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    border-bottom: 1px solid #e5dece;
+}
+
+.profile-list dt {
+    padding: 10px 14px;
+    background-color: #eee5d1;
+    font-weight: bold;
+}
+
+.profile-list dd {
+    margin: 0;
+    padding: 10px 18px;
+    overflow-wrap: anywhere;
+}
+
+/* 好きな食べ物 */
+.feature {
+    padding: 4px 18px 8px;
+}
+
+.feature h3 {
+    margin: 0 0 6px;
+    color: #8c6330;
+    font-size: 1.25rem;
+}
+
+.feature p {
+    margin: 0;
+}
+
+/* 趣味 */
+.hobby-list {
+    margin: 0;
+    padding-left: 28px;
+}
+
+.hobby-list li {
+    padding: 3px 0;
+}
+
+.hobby-list li::marker {
+    color: #b18c4d;
+}
+
+/* ひとこと */
+.message {
+    margin: 32px 0 40px;
+    padding: 24px;
+    background-color: #eee5d1;
+    border-radius: 6px;
+}
+
+.message p {
+    margin: 0;
+}
+
+/* フッター */
+.site-footer {
+    background-color: #1d3045;
+    color: #fffaf0;
+    font-size: 0.85rem;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+    .intro {
+        padding-top: 32px;
+    }
+
+    .profile-list div {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-list dt {
+        padding-bottom: 4px;
+    }
+
+    .profile-list dd {
+        padding-top: 4px;
+        padding-bottom: 12px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .message {
+        padding: 18px;
+    }
+    /* 自己紹介：画像と文章のレイアウト */
+    .intro-layout {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .profile-image {
+        display: block;
+        width: 180px;
+        max-width: 35%;
+        height: auto;
+        object-fit: cover;
+        border: 3px solid #b99a5b;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .intro-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .intro-text h2 {
+        overflow-wrap: anywhere;
+    }
+
+    /* スマートフォン */
+    @media (max-width: 600px) {
+        .intro-layout {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .profile-image {
+            width: 150px;
+            max-width: 100%;
+        }
+    }
 }

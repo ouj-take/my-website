@@ -3,22 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介</title>
+    <title>山田太郎左衛門の自己紹介</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>山田太郎左衛門の自己紹介</h1>
-    <p>放送大学でGithubを学んでいます。</p>
-    <p>好きな食べ物：カレーうどん</p>
 
-    <h2>プロフィール</h2>
-    <ul>
-        <li>出身：兵庫県</li>
-        <li>学んでいること：情報</li>
-    </ul>
-    <h2>趣味・特技</h2>
-    <p>読書</p>
-    <p>このページは、GitHub Pagesで公開しています。</p>
-    <footer><p>最終更新：2026年10月</p></footer>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1>山田太郎左衛門の自己紹介</h1>
+            <p class="subtitle">江戸の町人、情報を学ぶ</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <div class="intro-layout">
+                <img src="image/tarozaemon.png" alt="山田太郎左衛門の肖像" class="profile-image">
+
+                <div class="intro-text">
+                    <h2>江戸の町に暮らす、山田太郎左衛門です。</h2>
+                    <p>
+                        放送大学で情報やWeb開発を学んでいます。
+                        新しい知識を身につけ、できることを増やしていきたいです。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="profile">
+            <h2>プロフィール</h2>
+            <dl class="profile-list">
+                <div>
+                    <dt>名前</dt>
+                    <dd>山田太郎左衛門</dd>
+                </div>
+                <div>
+                    <dt>出身</dt>
+                    <dd>兵庫県（摂津国）</dd>
+                </div>
+                <div>
+                    <dt>時代</dt>
+                    <dd>江戸時代</dd>
+                </div>
+                <div>
+                    <dt>身分</dt>
+                    <dd>町人</dd>
+                </div>
+                <div>
+                    <dt>学んでいること</dt>
+                    <dd>情報・Web開発</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="content-section" id="food">
+            <h2>好きな食べ物</h2>
+            <div class="feature">
+                <h3>カレーうどん</h3>
+                <p>スパイスの香りと出汁の旨みが好きです。</p>
+            </div>
+        </section>
+
+        <section class="content-section" id="hobby">
+            <h2>趣味・特技</h2>
+            <ul class="hobby-list">
+                <li>読書</li>
+                <li>新しい知識を学ぶこと</li>
+                <li>江戸の町を歩くこと</li>
+                <li>美味しいものを食べること</li>
+            </ul>
+        </section>
+
+        <section class="message">
+            <h2>ひとこと</h2>
+            <p>
+                古いものの良さを大切にしながら、
+                新しい技術にも挑戦していきます。
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>GitHub Pagesで公開中</p>
+            <p>最終更新：2026年10月</p>
+        </div>
+    </footer>
+
 </body>
 </html>
