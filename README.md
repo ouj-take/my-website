@@ -8,4 +8,4 @@
 - style.css：見た目の設定
 
 ## 公開URL
-（第７回で記入）
+https://ouj-take.github.io/my-website/
