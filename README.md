@@ -1,4 +1,5 @@
 # my-website
+![CI](https://github.com/ouj-take/my-website/actions/workflows/ci.yml/badge.svg)
 
 放送大学　面接授業「Githubによるウェブ開発」で作成している自己紹介サイトです。
 
